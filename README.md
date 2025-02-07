@@ -12,8 +12,8 @@ Un contenedor es un entorno independiente que incluye el código de la aplicaci�
 
 ### 🎯 Beneficios de Usar Docker  
 
-✔️ **Portabilidad**: Permite ejecutar aplicaciones de manera uniforme en distintos sistemas y plataformas.  
-✔️ **Aislamiento**: Cada contenedor funciona de forma independiente, evitando conflictos de dependencias.  
-✔️ **Escalabilidad**: Facilita el escalamiento horizontal al ejecutar múltiples instancias de contenedores de manera eficiente.  
-✔️ **Eficiencia**: Al compartir el mismo kernel del sistema operativo, los contenedores son más ligeros y rápidos que las máquinas virtuales.  
+- **Portabilidad**: Permite ejecutar aplicaciones de manera uniforme en distintos sistemas y plataformas.  
+- **Aislamiento**: Cada contenedor funciona de forma independiente, evitando conflictos de dependencias.  
+- **Escalabilidad**: Facilita el escalamiento horizontal al ejecutar múltiples instancias de contenedores de manera eficiente.  
+- **Eficiencia**: Al compartir el mismo kernel del sistema operativo, los contenedores son más ligeros y rápidos que las máquinas virtuales.  
 
