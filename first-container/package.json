@@ -1,0 +1,17 @@
+{
+  "name": "first-container",
+  "version": "1.0.0",
+  "description": "Este documento proporciona instrucciones para configurar una aplicación Express con MongoDB dentro de un contenedor Docker y realizar pruebas en el sitio web resultante.",
+  "main": "src/index.js",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.10.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leyton M. Espitia Diaz",
+  "license": "MIT"
+}

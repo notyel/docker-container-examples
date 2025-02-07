@@ -50,7 +50,7 @@ Además, crea una carpeta en la ruta de tu preferencia para tu proyecto.
 
 ### 2. Creación del Archivo `index.js`
 
-Dentro de la carpeta de tu proyecto, crea un archivo llamado `index.js`. Abre este archivo con tu editor de código preferido y copia el siguiente código en él:
+Dentro de la carpeta de tu proyecto, crea una carpeta llamada `src` y dentro de ella un archivo llamado `index.js`. Abre este archivo con tu editor de código preferido y copia el siguiente código en él:  
 
 ```JavaScript
 import express from 'express';
@@ -117,10 +117,10 @@ Este comando instalará las dependencias necesarias, incluyendo **Express** y **
 
 ### 4. Ejecución de la Aplicación
 
-Para ejecutar la aplicación **Express**, simplemente ejecuta el siguiente comando en la terminal, en el directorio de tu proyecto:
+Para ejecutar la aplicación **Express**, simplemente ejecuta el siguiente comando en la terminal desde el directorio de tu proyecto:  
 
 ```bash
-node index.js
+node src/index.js
 ```
 
 Esto iniciará tu **Servidor Express** y estará listo para procesar solicitudes en `http://localhost:3000/`.
@@ -158,11 +158,9 @@ Para contenerizar nuestra aplicación Express con MongoDB en Docker, seguiremos 
 
 2. **Configuración del Dockerfile**: En el Dockerfile, especificaremos las instrucciones para crear una imagen que contenga nuestra aplicación Express con MongoDB. Utilizaremos la misma sintaxis que antes:
 
-<div style="text-align:center"> 
-
-  ![image.png](screenshots/Screenshot_1.png)
-
-</div>
+<p align="center">
+  <img src="screenshots/Screenshot_1.png" alt="Estructura de carpetas con el archivo Dockerfile" />
+</p>
 
 ```Dockerfile
 # Utiliza la imagen base de Node.js versión 20
@@ -178,7 +176,7 @@ COPY . /home/app
 EXPOSE 3000
 
 # Define el comando predeterminado para ejecutar cuando se inicia el contenedor, que es ejecutar el archivo index.js usando Node.js
-CMD ["node", "/home/app/index.js"]
+CMD ["node", "/home/app/src/index.js"]
 ```
 
 3. **Construcción de la Imagen**: Una vez que hayamos creado el Dockerfile, utilizaremos el comando `docker build` para construir nuestra imagen de contenedor. Asegúrate de ejecutar este comando desde el directorio que contiene el Dockerfile.
