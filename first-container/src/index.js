@@ -35,14 +35,17 @@ app.get('/', async (_req, res) => {
 // Ruta para crear un nuevo animal
 app.get('/crear', async (_req, res) => {
   try {
-    const nuevoAnimal = await Animal.create({ tipo: 'Perro', estado: 'Ladrando' })
+    const tipos = ['Perro', 'Gato', 'Pájaro', 'Pez', 'Hamster', 'Conejo', 'Tortuga'];
+    const estados = ['Comiendo', 'Durmiendo', 'Jugando', 'Corriendo', 'Saltando', 'Nadando', 'Reposando', 'Cazando', 'Explorando', 'Descansando', 'Observando', 'Interactuando'];
+    const tipoAleatorio = tipos[Math.floor(Math.random() * tipos.length)];
+    const estadoAleatorio = estados[Math.floor(Math.random() * estados.length)];
+    const nuevoAnimal = await Animal.create({ tipo: tipoAleatorio, estado: estadoAleatorio });
     return res.status(201).json(nuevoAnimal);
   } catch (error) {
     console.error('Error al crear animal:', error);
     return res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
-
 
 // Iniciar el servidor
 const PORT = process.env.PORT || 3000;
